@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/JavaScript" src="twitter.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                $('#searchButton').click(function(e)
+                {
+                    e.preventDefault();
+                    Tweets.init($('#searchTerms').val());
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p><input id="searchTerms"><button id="searchButton">Get Tweets</button> </p>
+        <div id="twits"></div>
+    </body>
+</html>
